@@ -1,16 +1,4 @@
 class FormaGeometrica:
-    def calculo(self):
-        pass
-
-class Retangulo(FormaGeometrica):
-    def __init__(self, b, h):
-        self.base = b
-        self.altura = h
-
-    def area(self):
-        return self.base * self.altura
-
-class Circulo(FormaGeometrica):
     PI = 3.14159 
 
     def __init__(self, r):
@@ -21,6 +9,17 @@ class Circulo(FormaGeometrica):
 
     def area(self):
         return Circulo.PI * (self.raio ** 2)
+
+class Retangulo(FormaGeometrica):
+    def __init__(self, b, h):
+        self.base = b
+        self.altura = h
+
+    def area(self):
+        return self.base * self.altura
+
+class Circulo(FormaGeometrica):
+    pass
 
 
 retangulo = Retangulo(5, 3)
